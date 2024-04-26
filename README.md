@@ -1,4 +1,4 @@
-# BlindHarmony
+# MOST
 Official implementation of MOST: MR reconstruction Optimization for multiple downstream Tasks via continual learning
 ## Dependencies
 
