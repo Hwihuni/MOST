@@ -9,10 +9,6 @@ conda env create -f environment.yml
 
 ## Dataset
 
-The whole data of
-
 ## Pretrained models
-
-The checkpoints can be downloaded from google drive link i
 
 
