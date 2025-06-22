@@ -12,11 +12,11 @@ conda env create -f environment.yml
 
 ## Dataset
 
-The processed pickle data can be downloaded from google drive link in https://drive.google.com/drive/folders/1AuCYGiNOZ8hWrqiV_npsjmcodNVfRb6z?usp=share_link
+The processed pickle data can be downloaded from google drive link in https://drive.google.com/drive/folders/1DZlGPPKLTbDy9C2lElwPg7TYzZAIHBn3?usp=drive_link
 
 ## Pretrained models
 
-The checkpoints can be downloaded from google drive link in https://drive.google.com/drive/folders/1AuCYGiNOZ8hWrqiV_npsjmcodNVfRb6z?usp=share_link
+The checkpoints can be downloaded from google drive link in https://drive.google.com/drive/folders/1xWOzdJUkliPOtDYBem1EEdnJSph6egDb?usp=drive_link 
 
 
 ## Usage
