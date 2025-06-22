@@ -19,6 +19,7 @@ The processed pickle data can be downloaded from google drive link in https://dr
 The checkpoints can be downloaded from google drive link in https://drive.google.com/drive/folders/1AuCYGiNOZ8hWrqiV_npsjmcodNVfRb6z?usp=share_link
 
 
+## Usage
 ### MOST downstream task-oriented finetuning
 
 Use `train_MOST.sh`.
