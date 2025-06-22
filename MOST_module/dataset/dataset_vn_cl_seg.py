@@ -16,12 +16,12 @@ class BasicDataset(Dataset):
         self.task = args.task
         self.class_num = args.class_num
         if memory:
-            path_image = f'/fast_storage/hwihun/pkl_clcl_memory/{args.name}/pkl_memory_{memory_task}_{mode}.pklv4'
-            path_seg = f'/fast_storage/hwihun/pkl_clcl_memory/{args.name}/pkl_memory_{memory_task}_{mode}_target.pklv4'
+            path_image = f'./pickle_buffer/{args.name}/pkl_memory_{memory_task}_{mode}.pklv4'
+            path_seg = f'./pickle_buffer/{args.name}/pkl_memory_{memory_task}_{mode}_target.pklv4'
             self.task = memory_task
         else:        
-            path_image = f'/fast_storage/hwihun/pkl_clcl/pkl_{args.task}_{mode}.pklv4'
-            path_seg = f'/fast_storage/hwihun/pkl_clcl/pkl_{args.task}_{mode}_target.pklv4'
+            path_image = f'./pickle_train/pkl_{args.task}_{mode}.pklv4'
+            path_seg = f'./pickle_train/pkl_{args.task}_{mode}_target.pklv4'
         self.target = self.load_pkls(path_image)
         self.seg_images = self.load_pkls(path_seg)
         self.target = [np.transpose(image, [2, 0, 1]) for image in self.target]

@@ -15,10 +15,10 @@ class BasicDataset(Dataset):
     def __init__(self, args,mode,memory = False,memory_task = None):
         self.task = args.task
         if memory:
-            path_image = f'/fast_storage/hwihun/pkl_clcl_memory/{args.name}/pkl_memory_{memory_task}_{mode}.pklv4'
+            path_image = f'./pickle_buffer/{args.name}/pkl_memory_{memory_task}_{mode}.pklv4'
             self.task = memory_task
         else:        
-            path_image = f'/fast_storage/hwihun/pkl_clcl/pkl_{args.task}_{mode}.pklv4'
+            path_image = f'./pickle_train/pkl_{args.task}_{mode}.pklv4'
         self.target = self.load_pkls(path_image)
         self.target = [np.transpose(image, [2, 0, 1]) for image in self.target]
         self.args = args

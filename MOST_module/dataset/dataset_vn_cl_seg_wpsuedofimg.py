@@ -16,13 +16,13 @@ class BasicDataset(Dataset):
         self.task = args.task
         self.class_num = args.class_num
         if memory:
-            path_image = f'/fast_storage/hwihun/pkl_clcl_memory/{args.name}/pkl_memory_{memory_task}_{mode}.pklv4'
-            path_seg = f'/fast_storage/hwihun/pkl_clcl_memory/{args.name}/pkl_memory_{memory_task}_{mode}_target.pklv4'
-            path_psuedo_iamge =  f'/fast_storage/hwihun/pkl_clcl_memory/{args.name}/pkl_memory_{memory_task}_{mode}_fimg.pklv4'
+            path_image = f'./pickle_buffer/{args.name}/pkl_memory_{memory_task}_{mode}.pklv4'
+            path_seg = f'./pickle_buffer/{args.name}/pkl_memory_{memory_task}_{mode}_target.pklv4'
+            path_psuedo_iamge =  f'./pickle_buffer/{args.name}/pkl_memory_{memory_task}_{mode}_fimg.pklv4'
             self.task = memory_task
         else:        
-            path_image = f'/fast_storage/hwihun/pkl_clcl/pkl_{args.task}_{mode}.pklv4'
-            path_seg = f'/fast_storage/hwihun/pkl_clcl/pkl_{args.task}_{mode}_target.pklv4'
+            path_image = f'./pickle_train/pkl_{args.task}_{mode}.pklv4'
+            path_seg = f'./pickle_train/pkl_{args.task}_{mode}_target.pklv4'
         self.target = self.load_pkls(path_image)
         self.psuedo_target = self.load_pkls(path_psuedo_iamge)
         self.seg_images = self.load_pkls(path_seg)
